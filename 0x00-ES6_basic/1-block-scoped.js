@@ -4,9 +4,9 @@ export default function taskBlock(trueOrFalse) {
 
   if (trueOrFalse) {
 	  // Hoisting
-    const task = true;
+    		const task = true;
 	  // Eslint
-    const task2 = false;
+    		const task2 = false;
   }
 
   return [task, task2];
