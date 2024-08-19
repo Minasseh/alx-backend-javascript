@@ -5,7 +5,6 @@ process.stdin.on('data', function(data) {
   var name = data.trim();
   if (name !== null) {
     process.stdout.write('Your name is: ' + name + '\n');
-    process.stdin.end()
   }
 });
 
