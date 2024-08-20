@@ -1,6 +1,6 @@
 const http = require('http');
-const countStudents = require('./3-read_file_async');
 const url = require('url');
+const countStudents = require('./3-read_file_async');
 
 const app = http.createServer((req, res) => {
   const parsedUrl = url.parse(req.url, true);
@@ -30,9 +30,6 @@ const app = http.createServer((req, res) => {
   }
 });
 
-app.listen(1245, () => {
-  console.log('Server is listening on port 1245');
-});
+app.listen(1245, '127.0.0.1');
 
 module.exports = app;
-
