@@ -4,7 +4,7 @@ const countStudents = (path) => {
   try {
     const data = fs.readFileSync(path, 'utf8');
 
-    const lines = data.split('\n').filter(line => line.trim() !== '');
+    const lines = data.split('\n').filter((line) => line.trim() !== '');
 
     if (lines.length === 0) {
       throw new Error('Cannot load the database');
@@ -12,7 +12,7 @@ const countStudents = (path) => {
 
     // Extract headers and student records
     // const headers = lines[0].split(',');
-    const students = lines.slice(1).map(line => line.split(','));
+    const students = lines.slice(1).map((line) => line.split(','));
 
     // Count the total number of students
     const studentCount = students.length;
@@ -21,7 +21,7 @@ const countStudents = (path) => {
     // Create a dictionary to store students by field
     const fields = {};
 
-    students.forEach(student => {
+    students.forEach((student) => {
       const field = student[3]; // Assuming the field is in the 4th column
       const firstName = student[0]; // Assuming the first name is in the 1st column
 
