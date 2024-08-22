@@ -3,7 +3,7 @@ const calculateNumber = require("./0-calcul");
 
 describe('calculateNumber', () => {
   it('adds two numbers', () => {
-    assert.strictEqual(calculateNumber(1, 3), 4);
+    assert.strictEqual(calculateNumber(1.4, 3), 4);
   });
   it('adds two numbers', () => {
     assert.strictEqual(calculateNumber(1, 3.7), 5);
